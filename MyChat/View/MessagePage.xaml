@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyChat.View.MessagePage">
+ 
+    <StackLayout>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                           HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="5">
+           <!-- <Label FontSize="18" Text="Логин" />
+            <Entry x:Name="userNameBox"  Text="{Binding UserName}" HorizontalOptions="FillAndExpand"/> -->
+            <Label FontSize="Small" Text="Сообщение" />
+        </StackLayout>
+        <ListView ItemsSource="{Binding Messages}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding User}" FontAttributes="Bold" />
+                                <Label Text="{Binding Message}" Margin="10, 0, 0, 0" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Padding="5">
+            <Entry x:Name="entry"  HorizontalOptions="FillAndExpand" Text="{Binding Message}"/>
+            <Button Text="Отправить" IsEnabled="{Binding IsConnected}" Command="{Binding SendMessageCommand}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

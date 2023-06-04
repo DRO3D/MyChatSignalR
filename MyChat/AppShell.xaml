@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyChat.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyChat"
+    xmlns:local2="clr-namespace:MyChat.View"
+    Shell.FlyoutBehavior="Disabled">
+    <!--<Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="tocheka.png"
+          HeightRequest="142"
+          VerticalOptions="Center"
+          WidthRequest="230"
+          HorizontalOptions="Center" />
+        </Grid>
+    </Shell.FlyoutHeader>
+    -->
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate local2:LoginPage}" Route="login"/>
+    
+    <TabBar>
+        <Tab Title="Home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="home"/>
+        </Tab>
+        <Tab Title="Message">
+            <ShellContent
+                Title="Message"
+                ContentTemplate="{DataTemplate local2:MessagePage}"
+                Route="message"/>
+        </Tab>
+        <Tab Title="Settings">
+            <ShellContent
+                Title="Settings"
+                ContentTemplate="{DataTemplate local2:Settings}"
+                Route="settings"/>
+        </Tab>
+        
+    </TabBar>
+
+    <ShellContent Title="Message" Route="MessagePage" ContentTemplate="{DataTemplate local2:MessagePage}"/>
+
+
+    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked"/>
+
+</Shell>
