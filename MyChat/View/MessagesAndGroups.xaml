@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyChat.View.Settings"
-             Title="Settings">
-    <Grid>
+             x:Class="MyChat.View.MessagesAndGroups"
+             Title="MessagesAndGroups">
     <VerticalStackLayout>
-
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
     </VerticalStackLayout>
-        <StackLayout VerticalOptions="End">
-            <Button Text="Logout" Clicked="Button_Clicked"/>
-        </StackLayout>
-    </Grid>
 </ContentPage>
