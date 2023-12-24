@@ -13,7 +13,7 @@
             </StackLayout>
 
             <StackLayout Margin="0,10">
-                <Label Text="Email" TextColor="Black" FontSize="16"/>
+                <Label Text="Username" TextColor="Black" FontSize="16"/>
 
                 <Grid Margin="0,5">
                     <Entry x:Name="Username"  BackgroundColor="Transparent" TextColor="Black" PlaceholderColor="LightGray"

@@ -32,7 +32,7 @@ public partial class RegisterPage : ContentPage
         }
         catch (Exception ex)
         {
-            DisplayAlert("Error!", $"Error message: {ex.Message}", "Ok");
+            await DisplayAlert("Error!", $"Error message: {ex.Message}", "Ok");
         }
         if (response.IsSuccessStatusCode)
         {
